@@ -13,7 +13,7 @@ app.use(express.json());
 
 //POST
 app.post("/send-mail", async (req, res) => {
-    const { to, name, subject, message } = req.body;
+    const { email, subject, message } = req.body;
 
     //Create a transport;
     const transporter = nodemailer.createTransport({
@@ -27,8 +27,7 @@ app.post("/send-mail", async (req, res) => {
     //Email Options
     const emailOptions = {
         from: process.env.EMAIL_USER,
-        to,
-        name,
+        email,
         subject,
         message
     }
