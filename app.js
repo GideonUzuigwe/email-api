@@ -2,12 +2,14 @@ const express = require("express");
 const app = express();
 const nodemailer = require("nodemailer");
 const dotenv = require("dotenv");
+const cors = require("cors");
 const PORT = process.env.port || 3000;
 
 //Initialize the environmental variable
 dotenv.config();
 
 //List all the middlewares you'll use in this project;
+app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
