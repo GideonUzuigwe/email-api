@@ -1,0 +1,1 @@
+import{u as n,r as c,j as e}from"./index-tW38oGEY.js";const h=({title1:s,title2:t,subTitle:r})=>{const{theme:i}=n();return c.useEffect(()=>{document.title="Gideon - About Me"},[]),e.jsx("div",{className:`title ${i}`,children:e.jsxs("div",{children:[e.jsxs("h1",{children:[e.jsx("span",{children:s}),e.jsx("span",{children:t})]}),e.jsx("h2",{children:r})]})})};export{h as T};
