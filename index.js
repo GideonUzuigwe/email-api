@@ -11,7 +11,11 @@ dotenv.config();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("dist"))
+app.use(express.static("dist"));
+
+app.get("/home", (req, res) => {
+    res.status(200).json("This is my homepage...")
+})
 
 //POST
 app.post("/api/send-mail", async (req, res) => {
